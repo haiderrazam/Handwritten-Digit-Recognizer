@@ -39,8 +39,8 @@ if uploaded_file is not None:
     # Threshold image: black background, white digits
     _, img_thresh = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
-    st.write("### Thresholded Image")
-    st.image(img_thresh, caption="Thresholded", channels="GRAY")
+    ##st.write("### Thresholded Image")
+    ##st.image(img_thresh, caption="Thresholded", channels="GRAY")
 
     # Find contours (digits)
     contours, _ = cv2.findContours(img_thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
